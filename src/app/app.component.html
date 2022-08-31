@@ -1,0 +1,12 @@
+<table-component
+    [list]="userList"
+    (onCreateUser)="changeModal('create')"
+    (onEditUser)="changeModal('edit', $event)"
+    (onDeleteUser)="changeModal('closed', $event)"
+></table-component>
+
+<modal-component
+    [type]="modalType"
+    (onCloseModal)="changeModal('closed')"
+    (onSaveInfo)="onSaveInfo($event)"
+></modal-component>

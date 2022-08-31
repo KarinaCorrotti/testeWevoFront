@@ -1,0 +1,27 @@
+<div class="main-table">
+  <div class="button-create-modal">
+    <button class="button" (click)="createUser()">Cadastrar usuário</button>
+  </div>
+  <div class="table-container">
+    <table>
+      <tr class="title-table">
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>Email</th>
+        <th>Telefone</th>
+        <th>Sexo</th>
+        <th>Data de Nascimento</th>
+      </tr>
+      <tr class="rows-table" *ngFor="let user of list">
+        <td>{{ user?.nome }}</td>
+        <td>{{ user?.cpf }}</td>
+        <td>{{ user?.email }}</td>
+        <td>{{ user?.telefone }}</td>
+        <td>{{ user?.sexo }}</td>
+        <td>{{ user?.dataNascimento }}</td>
+        <td class="edit" (click)="editUser(user)">Editar</td>
+        <td class="delete" (click)="deleteUser(user)">Deletar</td>
+      </tr>      
+    </table>
+  </div>   
+</div>

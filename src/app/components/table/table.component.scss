@@ -1,0 +1,88 @@
+.main-table{
+    background-color: rgb(231, 227, 233);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+	align-items: center;
+    .button-create-modal{
+        width: 60vw;
+        height: 20vh;       
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        .button {
+            width: 10vw;
+            height: 5vh;
+            background-color: #FFFFFF;
+            border: 0;
+            border-radius: .5rem;
+            box-sizing: border-box;
+            color: #111827;
+            font-family:'Commissioner', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.25rem;       
+            text-align: center;
+            text-decoration: none #0a0b0c solid;            
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;    
+            transition: 1s;
+            &:hover {
+              background-color: rgb(216, 206, 223);
+              transition: 2s;
+            }
+            &:focus {
+              outline: 2px solid transparent;
+              outline-offset: 2px;
+            }
+            &:focus-visible {
+              box-shadow: none;
+            }
+        }
+    }
+    .table-container{
+        .title-table{
+            th {
+                width: 12vw;
+                border: 1px solid rgb(190, 190, 190);
+                font-family:'Commissioner', sans-serif;
+                font-size: 12px;
+                background-color: rgb(192, 190, 201);
+            }           
+        }
+        .rows-table {
+            td {
+                border: 1px solid rgb(224, 217, 226);
+                text-align: center;
+                font-family:'Dosis', sans-serif;
+                font-size: 12px;               
+            }
+            .delete {
+                background-color: rgb(170, 96, 96);
+                color: #f8efef;
+                cursor: pointer;
+                transition: 1s;
+                &:hover {
+                    background-color: rgb(231, 202, 202);
+                    color: #646464;
+                    transition: 2s;
+                }
+            }
+            .edit {
+                color: #f8efef;
+                background-color: rgb(98, 126, 98);
+                cursor: pointer;
+                transition: 1s;
+                &:hover {
+                    background-color: rgb(206, 223, 208);
+                    color: #646464;
+                    transition: 2s;
+                }
+            }
+        }
+    }
+}

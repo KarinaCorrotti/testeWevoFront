@@ -1,0 +1,29 @@
+<div id="user-modal"
+    [style.top]="type === 'closed' ? '-245vh' : '0px'">
+    <div class="button-exit-modal">
+        <div class="buttonClose" (click)="windowCloseCadastro()">X</div>
+    </div>
+    <div class="modal-input">
+        <div class="inputContainer">
+            <input type="text" placeholder="Nome" [(ngModel)]="wevoService.selectedUser.nome">
+        </div>
+        <div class="inputContainer">
+            <input type="text" placeholder="CPF" [(ngModel)]="wevoService.selectedUser.cpf">
+        </div>
+        <div class="inputContainer">
+            <input type="text" placeholder="Email" [(ngModel)]="wevoService.selectedUser.email" [disabled]="type === 'edit'">
+        </div>
+        <div class="inputContainer">
+            <input type="text" placeholder="Telefone" [(ngModel)]="wevoService.selectedUser.telefone">
+        </div>
+        <div class="inputContainer">
+            <input type="text" placeholder="Sexo" [(ngModel)]="wevoService.selectedUser.sexo" >
+        </div>
+        <div class="inputContainer">
+            <input type="text" placeholder="Data de Nascimento" [(ngModel)]="wevoService.selectedUser.dataNascimento">
+        </div>
+    </div>
+    <div class="modal-button-save">
+        <div class="button-save" (click)="onSave()">Salvar</div>
+    </div>
+</div>

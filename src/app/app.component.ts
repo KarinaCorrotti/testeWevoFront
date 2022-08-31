@@ -20,7 +20,6 @@ export class AppComponent {
   getUserList(){
     this._wevoUsers.getUserList().subscribe((userList: IWevoUser[]) => {
       this.userList = userList;
-      console.log(this.userList)
     })
   }
 

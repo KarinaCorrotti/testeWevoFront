@@ -21,7 +21,7 @@ export class TableComponent {
     }
 
     editUser(user: IWevoUser) {
-        this._wevoUsersService.selectedUser = user;
+        this._wevoUsersService.selectedUser = JSON.parse(JSON.stringify(user));
         this.onEditUser.emit()
     }
 
